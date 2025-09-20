@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Image Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Generate stunning images with our AI-powered platform.">
+</head>
+<body>
+
+    <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+
+    <main class="container">
+        <header class="hero">
+            <h1 class="platform-title">Perfect Image Generator</h1>
+            <p class="tagline">Unleash your creativity with AI-powered image generation.</p>
+            <div class="input-group">
+                <input type="text" id="prompt-input" class="prompt-input" placeholder="Enter a description of the image you want to create..." aria-label="Image prompt input">
+                <button id="generate-btn" class="generate-btn" aria-label="Generate Image">Generate Image</button>
+            </div>
+        </header>
+
+        <section class="content-area">
+            <div id="image-container" class="image-container">
+                <div id="loading-spinner" class="loading-spinner" aria-label="Generating image, please wait"></div>
+                <img id="generated-image" class="generated-image" src="" alt="Generated image" style="display: none;">
+                <a id="download-link" class="download-btn" download="perfect-image.png" style="display: none;">
+                    Download Image
+                </a>
+            </div>
+
+            <section class="gallery-section">
+                <h2 class="gallery-title">Previously Generated Images</h2>
+                <div id="image-gallery" class="image-gallery">
+                    <p class="no-images">No images generated yet. Start creating!</p>
+                </div>
+            </section>
+        </section>
+
+    </main>
+
+    <div id="pin-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <h3 id="modal-title">Verification Required</h3>
+            <p>Please complete a quick verification step to generate your PIN and continue. This helps us prevent abuse and keep the platform free.</p>
+            <button id="verify-btn" class="modal-btn">Verify & Get PIN</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
